@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+
+    color: #38312F; /* Màu chữ */
+}
+
+/* Áp dụng màu cho icon FontAwesome */
+i {
+    color: #38312F;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 100;
+}
+
+.nav-links .dropdown-menu li {
+    width: 100%;
+}
+
+.nav-links .dropdown-menu a {
+    padding: 10px;
+    display: block;
+    color: black;
+}
+
+/* Hiển thị dropdown khi hover */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.icons a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    margin: 0 10px; /* Tạo khoảng cách giữa các icon */
+}
+
+.icons i {
+    font-size: 20px; /* Điều chỉnh kích thước icon */
+    transition: color 0.3s; /* Hiệu ứng đổi màu khi di chuột */
+}
+
+/* Khi di chuột vào icon, đổi màu */
+.icons i:hover {
+    color: #E67E22;
+}
+
+
+
+
+.search-container {
+    position: absolute;
+    top: 50px; /* Hiển thị dưới icon */
+    right: 100px;
+    display: none;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-box {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.suggestions {
+    margin-top: 5px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.suggestions div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f2f2f2;
+}
